@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "934188945894",
+    "project_id": "movie-app-aec24",
+    "storage_bucket": "movie-app-aec24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934188945894:android:0bd1e96785347731fa4627",
+        "android_client_info": {
+          "package_name": "com.example.movie_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT18t0j8bi12rSHA8wGFRmC4D_Cc8LaMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
