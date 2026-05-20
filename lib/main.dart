@@ -70,12 +70,14 @@ class MovieAppState extends State<MovieApp> {
   }
 
   void navigateFromDeepLink(String link) {
-    debugPrint('DeepLink: $link');
-
-    final uri = Uri.tryParse(link.replaceFirst('movie_app', 'movieapp'));
+    final fixedLink = link.replaceFirst('movieapptask://', 'movieapptask://');
+    final uri = Uri.tryParse(fixedLink);
     if (uri == null) return;
 
-    if (uri.host == 'movies' && uri.pathSegments.isNotEmpty) {
+    if (uri.host == 'open') {
+      navigated = true;
+      appRouter.go('/movies');
+    } else if (uri.host == 'details_screen' && uri.pathSegments.isNotEmpty) {
       final id = uri.pathSegments.first;
       navigated = true;
       appRouter.go('/movies/$id');

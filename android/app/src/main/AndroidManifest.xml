@@ -30,6 +30,20 @@
                 <data android:scheme="movie_app" android:host="movies"/>
             </intent-filter>
 
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="movieapptask" android:host="open"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="movieapptask" android:host="details_screen"/>
+            </intent-filter>
+
         </activity>
         <meta-data
             android:name="flutterEmbedding"

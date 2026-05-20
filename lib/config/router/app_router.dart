@@ -15,13 +15,15 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/movies',
       builder: (context, state) => const MoviesListScreen(),
-    ),
-    GoRoute(
-      path: '/movies/:id',
-      builder: (context, state) {
-        final movieId = int.parse(state.pathParameters['id']!);
-        return MovieDetailsScreen(movieId: movieId);
-      },
+      routes: [
+        GoRoute(
+          path: ':id',
+          builder: (context, state) {
+            final movieId = int.parse(state.pathParameters['id']!);
+            return MovieDetailsScreen(movieId: movieId);
+          },
+        ),
+      ],
     ),
   ],
 );
